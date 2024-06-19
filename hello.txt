@@ -1,2 +1,3 @@
-hello, Backend
-hello, world
+dirname:gets the parent folder
+basename:gets filename parent
+extname: gets the file extension

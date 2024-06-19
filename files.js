@@ -1,10 +1,13 @@
 
 const fs =require('fs');
-const message ="\nhello, world";
-fs.appendFile("hello.txt",message,(error)=>{
-    if(error){
-        console.error("error in writing file");
+
+fs.readFile("hello.txt","utf-8",(err,data)=>{
+    if(err){
+        console.error("error in reading file");
     }else{
-        console.log("file written successfully");
+        data.split('\n').forEach(line=>{
+            console.log(line.split(':')[0]);
+        })
+        
     }
-})
+});
